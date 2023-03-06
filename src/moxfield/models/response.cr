@@ -10,6 +10,16 @@ module Moxfield
     @[JSON::Field(key: "totalPages")]
     property total_pages : Int32
     property data : Array(T)
+
+    def each
+      data.each do |card|
+        yield card
+      end
+    end
+
+    def has_more? : Bool
+      self.total_pages > self.page_number
+    end
   end
 
   struct CardList(T)
