@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      moxfield:
-       github: your-github-user/moxfield
+       github: spoved/moxfield.cr
    ```
 
 2. Run `shards install`
@@ -28,7 +28,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/moxfield/fork>)
+1. Fork it (<https://github.com/spoved/moxfield.cr/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +36,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Holden Omans](https://github.com/your-github-user) - creator and maintainer
+- [Holden Omans](https://github.com/kalinon) - creator and maintainer

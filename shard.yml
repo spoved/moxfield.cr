@@ -7,3 +7,12 @@ authors:
 crystal: 1.7.2
 
 license: MIT
+dependencies:
+  spoved:
+    github: spoved/spoved.cr
+  db:
+    github: crystal-lang/crystal-db
+  halite:
+    github: icyleaf/halite
+  mtg:
+    github: spoved/mtg.cr

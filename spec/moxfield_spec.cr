@@ -1,9 +1,9 @@
 require "./spec_helper"
 
 describe Moxfield do
-  # TODO: Write tests
-
-  it "works" do
-    false.should eq(true)
+  describe Moxfield::SearchDatum do
+    it "serializes" do
+      Moxfield::SearchDatum.from_json(File.read("./spec/fixtures/search_datum.json"))
+    end
   end
 end

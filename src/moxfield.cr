@@ -1,6 +1,5 @@
-# TODO: Write documentation for `Moxfield`
-module Moxfield
-  VERSION = "0.1.0"
+module Moxfield; end
 
-  # TODO: Put your code here
-end
+require "./moxfield/*"
+
+Moxfield::Api.configure
