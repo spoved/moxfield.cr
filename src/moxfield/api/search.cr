@@ -1,6 +1,6 @@
 module Moxfield::Api::Search
   # This function searches for cards that match a given query string.
-  def card_query(q : String)
+  def card_query(q : String) : Moxfield::Types::CardList(Types::Card)
     # Build a hash of query parameters to be used in the HTTP request
     params = HTTP::Params.build do |form|
       form.add "q", q
@@ -10,17 +10,19 @@ module Moxfield::Api::Search
   end
 
   # This function wraps card list searches to properly set the request URI.
-  protected def fetch_card_list(path : String, params : String | Nil = nil)
+  protected def fetch_card_list(path : String, params : String | Nil = nil) : Moxfield::Types::CardList(Types::Card)
     # Build the request URI using the specified path and query parameters
     uri = make_request_uri(path, params)
     # Make the HTTP request and parse the response as a Moxfield::CardList object
     data = make_request(uri)
-    Moxfield::Types::CardList(Types::CardDatum).from_json(data)
+    resp = Moxfield::Types::CardList(Types::Card).from_json(data)
+    resp.uri = uri
+    resp
   end
 
   # This function searches for decks that match the specified criteria.
   def deck_query(page = 1, size = 100, sort : SortType = SortType::Updated, dir = SORT_DES,
-                 format : String? = nil, commander_card_id : String? = nil)
+                 format : String? = nil, commander_card_id : String? = nil) : Moxfield::Types::PagedResponse(Types::DeckDatum)
     # Build a hash of query parameters to be used in the HTTP request
     params = HTTP::Params.build do |form|
       form.add "pageNumber", page.to_s
@@ -37,11 +39,13 @@ module Moxfield::Api::Search
   end
 
   # This function wraps deck list searches to properly set the request URI.
-  protected def fetch_deck_list(path : String, params : String | Nil = nil)
+  protected def fetch_deck_list(path : String, params : String | Nil = nil) : Moxfield::Types::PagedResponse(Types::DeckDatum)
     # Build the request URI using the specified path and query parameters
     uri = make_request_uri(path, params)
     # Make the HTTP request and parse the response as a Moxfield::PagedResponse object
     data = make_request(uri)
-    Moxfield::Types::PagedResponse(Types::DeckDatum).from_json(data)
+    resp = Moxfield::Types::PagedResponse(Types::DeckDatum).from_json(data)
+    resp.uri = uri
+    resp
   end
 end

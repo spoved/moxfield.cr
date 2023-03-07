@@ -28,7 +28,7 @@ module Moxfield::Types
     property created_by_user : CreatedByUser
     property authors : Array(CreatedByUser)
     @[JSON::Field(key: "requestedAuthors")]
-    property requested_authors : Array(JSON::Any?)
+    property requested_authors : Array(String)
     property main : Card
     @[JSON::Field(key: "mainboardCount")]
     property mainboard_count : Int32

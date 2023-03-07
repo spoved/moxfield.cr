@@ -1,3 +1,6 @@
+require "uuid"
+require "uuid/json"
+
 module Moxfield::Types
   alias Cards = Array(Card)
 
@@ -6,7 +9,7 @@ module Moxfield::Types
     property id : String
     @[JSON::Field(key: "uniqueCardId")]
     property unique_card_id : String
-    property scryfall_id : String
+    property scryfall_id : UUID
     property set : String
     property set_name : String
     property name : String
@@ -15,11 +18,11 @@ module Moxfield::Types
     property cmc : Float32
     @[JSON::Field(key: "type")]
     property _type : String?
-    property type_line : String
+    property type_line : String?
     property oracle_text : String?
     property mana_cost : String?
     property colors : Array(String)
-    property color_indicator : Array(JSON::Any?)
+    property color_indicator : Array(String)
     property color_identity : Array(String)
     property legalities : Legalities
     property frame : String

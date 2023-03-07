@@ -23,32 +23,32 @@ module Moxfield::Types
     property type_line : String
     property oracle_text : String
     property colors : Array(String)
-    property color_indicator : Array(JSON::Any?)
+    property color_indicator : Array(String)
     property flavor_text : String?
   end
 
   struct Legalities
     include JSON::Serializable
-    property standard : String
-    property future : String
-    property historic : String
-    property gladiator : String
-    property pioneer : String
-    property explorer : String
-    property modern : String
-    property legacy : String
-    property pauper : String
-    property vintage : String
-    property penny : String
-    property commander : String
-    property brawl : String
-    property historicbrawl : String
-    property alchemy : String
-    property paupercommander : String
-    property duel : String
-    property oldschool : String
-    property premodern : String
-    property predh : String
+    property standard : String?
+    property future : String?
+    property historic : String?
+    property gladiator : String?
+    property pioneer : String?
+    property explorer : String?
+    property modern : String?
+    property legacy : String?
+    property pauper : String?
+    property vintage : String?
+    property penny : String?
+    property commander : String?
+    property brawl : String?
+    property historicbrawl : String?
+    property alchemy : String?
+    property paupercommander : String?
+    property duel : String?
+    property oldschool : String?
+    property premodern : String?
+    property predh : String?
   end
 
   struct Prices

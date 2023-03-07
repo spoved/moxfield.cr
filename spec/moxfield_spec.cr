@@ -1,9 +1,9 @@
 require "./spec_helper"
 
 describe Moxfield do
-  describe Moxfield::Types::CardDatum do
+  describe Moxfield::Types::Card do
     it "serializes" do
-      Moxfield::Types::CardDatum.from_json(File.read("./spec/fixtures/search_datum.json"))
+      Moxfield::Types::Card.from_json(File.read("./spec/fixtures/search_datum.json"))
     end
   end
 
