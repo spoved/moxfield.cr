@@ -1,6 +1,6 @@
 # moxfield
 
-TODO: Write a description here
+An official API for <https://www.moxfield.com>
 
 ## Installation
 
