@@ -1,4 +1,4 @@
-module Moxfield
+module Moxfield::Types
   alias Cards = Array(Card)
 
   struct Card

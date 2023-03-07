@@ -15,7 +15,7 @@ module Moxfield::Api::Search
     uri = make_request_uri(path, params)
     # Make the HTTP request and parse the response as a Moxfield::CardList object
     data = make_request(uri)
-    Moxfield::CardList(CardDatum).from_json(data)
+    Moxfield::Types::CardList(Types::CardDatum).from_json(data)
   end
 
   # This function searches for decks that match the specified criteria.
@@ -42,6 +42,6 @@ module Moxfield::Api::Search
     uri = make_request_uri(path, params)
     # Make the HTTP request and parse the response as a Moxfield::PagedResponse object
     data = make_request(uri)
-    Moxfield::PagedResponse(DeckDatum).from_json(data)
+    Moxfield::Types::PagedResponse(Types::DeckDatum).from_json(data)
   end
 end

@@ -18,7 +18,7 @@ describe Moxfield::Api do
   describe "#deck" do
     it "can fetch by id" do
       deck = Moxfield::Api.deck("iB8WyjxdR061hpRZNRxj-A")
-      deck.should be_a Moxfield::Deck
+      deck.should be_a Moxfield::Types::Deck
     end
   end
 end

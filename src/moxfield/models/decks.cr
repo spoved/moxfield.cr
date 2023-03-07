@@ -1,4 +1,4 @@
-module Moxfield
+module Moxfield::Types
   alias Decks = Array(Deck)
 
   struct Deck

@@ -1,4 +1,4 @@
-module Moxfield
+module Moxfield::Types
   struct PagedResponse(T)
     include JSON::Serializable
     @[JSON::Field(key: "pageNumber")]

@@ -1,4 +1,4 @@
-module Moxfield
+module Moxfield::Types
   struct CardDatum
     include JSON::Serializable
 
