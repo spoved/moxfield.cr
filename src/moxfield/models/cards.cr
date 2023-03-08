@@ -25,7 +25,7 @@ module Moxfield::Types
     property color_indicator : Array(String)
     property color_identity : Array(String)
     property legalities : Legalities
-    property frame : String
+    property frame : String?
     property reserved : Bool
     property digital : Bool
     property foil : Bool
@@ -41,7 +41,7 @@ module Moxfield::Types
     property has_arena_legal : Bool
     property prices : Prices
     property card_faces : Array(CardFace)
-    property artist : String
+    property artist : String?
     property promo_types : Array(String)
     @[JSON::Field(key: "cardHoarderUrl")]
     property card_hoarder_url : String?
@@ -53,13 +53,13 @@ module Moxfield::Types
     property tcg_player_url : String?
     @[JSON::Field(key: "isArenaLegal")]
     property is_arena_legal : Bool
-    property released_at : String
+    property released_at : String?
     property multiverse_ids : Array(Int32)?
     property cardmarket_id : Int32?
     property tcgplayer_id : Int32?
     property cardkingdom_id : Int32?
     property reprint : Bool
-    property set_type : String
+    property set_type : String?
     @[JSON::Field(key: "isToken")]
     property is_token : Bool
     @[JSON::Field(key: "defaultFinish")]
