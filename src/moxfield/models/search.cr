@@ -31,7 +31,7 @@ module Moxfield::Types
     @[JSON::Field(key: "isShared")]
     property is_shared : Bool
     @[JSON::Field(key: "mainCardId")]
-    property main_card_id : String
+    property main_card_id : String? = nil
     @[JSON::Field(key: "mainCardIdIsCardFace")]
     property main_card_id_is_card_face : Bool
     @[JSON::Field(key: "createdByUser")]
