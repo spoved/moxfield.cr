@@ -29,7 +29,7 @@ module Moxfield::Types
     property authors : Array(CreatedByUser)
     @[JSON::Field(key: "requestedAuthors")]
     property requested_authors : Array(CreatedByUser)
-    property main : Card
+    property main : Card? = nil
     @[JSON::Field(key: "mainboardCount")]
     property mainboard_count : Int32
     property mainboard : Hash(String, Entry)
