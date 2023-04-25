@@ -1,6 +1,6 @@
 # moxfield
 
-An official API for <https://www.moxfield.com>
+An unofficial API for <https://www.moxfield.com>
 
 ## Installation
 
